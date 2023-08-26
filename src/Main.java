@@ -1,38 +1,35 @@
+/*
+ * Author: Justin Tran 017335461
+ * File: Main.java
+ * Description: program takes a set amount of words from the user and checks for the number of n's in each word.
+ */
+
 import java.util.Scanner;
 public class Main {
-
     public static void main(String[] args) {
 
-        //Set numberLoops to 0
         int numberLoops = 0;
         int nCounter = 0;
         int userAttempts;
 
-        //Ask for userAttempts
         Scanner scnr = new Scanner(System.in);
-        System.out.println("Enter the max number of loops: ")
+        System.out.print("Enter the max number of loops: ");
         userAttempts = scnr.nextInt();
-        System.out.println("Enter the max number of loops: ")
+        System.out.println("Max tries is " + userAttempts);
 
-        //While numberLoops != userAttempts
         while(numberLoops != userAttempts) {
-            //Ask user to enter a word
+            System.out.print("Please enter a word: ");
             String userWord = scnr.next();
-            //String userWord = "nnhello";
-            //increment one to userAttempts
             numberLoops++;
 
-            //For (int i = 0, i<word length, i++)
             for (int i = 0; i < userWord.length(); i++) {
-                //if specific character = "n"
                 char userLetter = userWord.charAt(i);
                 if (userLetter == 'n') {
                     nCounter++;
                 }
             }
-
+            System.out.println("word: " + userWord + " has " + nCounter + " letter n's");
+            nCounter = 0;
         }
-
-        System.out.println(nCounter);
     }
 }
