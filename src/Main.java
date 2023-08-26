@@ -28,8 +28,30 @@ public class Main {
                     nCounter++;
                 }
             }
-            System.out.println("word: " + userWord + " has " + nCounter + " letter n's");
+            if(nCounter != 1) {
+                System.out.println("word: " + userWord + " has " + nCounter + " letter n's");
+            }else{
+                System.out.println("word: " + userWord + " has " + nCounter + " letter n");
+            }
             nCounter = 0;
         }
     }
 }
+
+/*
+/Users/justintran/Library/Java/JavaVirtualMachines/openjdk-20.0.2/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=53199:/Applications/IntelliJ IDEA.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/justintran/F23-CS49J/CS49J-Assignment2-JustinTran/out/production/CS49J-Assignment2-JustinTran Main
+        Enter the max number of loops: 5
+        Max tries is 5
+        Please enter a word: abc
+        word: abc has 0 letter n's
+        Please enter a word: xyz
+        word: xyz has 0 letter n's
+        Please enter a word: nine
+        word: nine has 2 letter n's
+        Please enter a word: sun
+        word: sun has 1 letter n
+        Please enter a word: 123
+        word: 123 has 0 letter n's
+
+        Process finished with exit code 0
+ */
